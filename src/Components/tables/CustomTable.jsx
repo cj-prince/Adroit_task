@@ -21,18 +21,18 @@ function CustomTable(props) {
     data
   },useFilters,usePagination);
 
-  const { getTableProps, getTableBodyProps, headerGroups, page, prepareRow,setFilter, canPreviousPage, canNextPage, pageOptions, pageCount, gotoPage,
+  const { getTableProps, getTableBodyProps, headerGroups, page, prepareRow,setFilter, canPreviousPage, canNextPage, pageOptions, gotoPage,
   nextPage, previousPage, state: { pageIndex }, } = tableInstance;
 
   return (
     <>
-    <InputDiv>
-      <input
-        value={filterInput}
-        onChange={handleFilterChange}
-        placeholder={"Search title"}
-      />
-    </InputDiv>
+      <InputDiv>
+        <input
+          value={filterInput}
+          onChange={handleFilterChange}
+          placeholder={"Search title"}
+        />
+      </InputDiv>
       
       <TableWrapper>
       <table {...getTableProps()}>
@@ -94,17 +94,16 @@ function CustomTable(props) {
   )
 }
 
+
 const TableWrapper = styled.div`
+  display:flex ;
   flex-direction:column ;
   justify-content:center ;
   align-items:center;
+  font-style: normal;
   width: 100%;
   max-width: 100%;
   overflow-x: scroll;
-  overflow-y: scroll;
-  font-style: normal;
-  display:flex ;
-  
 
   table {
     height:80vh;
@@ -112,10 +111,10 @@ const TableWrapper = styled.div`
     width: 90%;
     border: 1px solid rgba(164, 167, 183, 0.4);
     border-radius: 4px;
+    overflow-x: scroll;
   }
 
   th {
-    
     text-align: center;
     white-space: nowrap;
   }

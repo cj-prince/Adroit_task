@@ -26,7 +26,7 @@ const CenterView = () => {
           } 
 
         fetchPhotos()
-  },[])
+  },[setPhotos])
 
   const tableData = photos?.map((f) => ({
       col1: f?.id,
@@ -56,7 +56,6 @@ const CenterMain = styled.div`
       display: flex;
       justify-content:center ;
       align-items: center;
-      margin-left:48px ;
       font-style: normal;
       font-weight: 800;
       font-size: 20px;

@@ -4,7 +4,7 @@ export const photosTableColumns =  [
         accessor: 'col1'
     },
      {
-        Header: 'albumId',
+        Header: 'album Id',
         accessor: 'col2',
     },
      {
@@ -12,7 +12,7 @@ export const photosTableColumns =  [
         accessor: "col3",
     },
      {
-        Header: 'thumbnailUrl',
+        Header: 'thumbnail Url',
         accessor: "col4"
     },
 ]
